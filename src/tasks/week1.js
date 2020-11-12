@@ -1,7 +1,7 @@
 
 // képlet: (a*X+c) MOD 1048576
 
-let placeInArray = 1000
+// let placeInArray = 1000
 
 function memoize(func) {
   var memo = {};
@@ -30,8 +30,11 @@ X = memoize(X)
 
 const arraySolution = (placeInArray) => {
   let array = []
+  let a=97
+  let c= 11
+  let modDivider= 1048576
   for (let index = 0; index < placeInArray; index++) {
-    let element = X(index)
+    let element = X(index, a, c, modDivider)
     array.push(element)
   }
   let sum = (total, actual) => {
@@ -40,5 +43,5 @@ const arraySolution = (placeInArray) => {
   return array.reduce(sum, 0)
 }
 console.log(X(2, 97, 11, 1048576))
-console.log(arraySolution(3))
+console.log(arraySolution(1000))
 export {X, arraySolution}

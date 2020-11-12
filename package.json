@@ -3,7 +3,7 @@
     "nodemon": "^2.0.6"
   },
   "scripts": {
-    "start": "node week1.js",
+    "start": "node src/tasks/week1.js",
     "test": "jest --watchAll"
   },
   "name": "megmerettetes2020",
