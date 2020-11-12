@@ -17,22 +17,16 @@ function memoize(func) {
 
   }
 }
-
 let X = (placeInArray, a, c, modDivider) => {
   if (placeInArray === 0) {
     return 11
   }
   return (a * X(placeInArray - 1, a, c, modDivider) + c) % modDivider
 }
-
 X = memoize(X)
-
-
-const arraySolution = (placeInArray) => {
+const arraySolution = (placeInArray, a, c, modDivider) => {
   let array = []
-  let a=97
-  let c= 11
-  let modDivider= 1048576
+ 
   for (let index = 0; index < placeInArray; index++) {
     let element = X(index, a, c, modDivider)
     array.push(element)
@@ -42,6 +36,6 @@ const arraySolution = (placeInArray) => {
   }
   return array.reduce(sum, 0)
 }
-console.log(X(2, 97, 11, 1048576))
-console.log(arraySolution(1000))
+// console.log(X(2, 97, 11, 1048576))
+console.log(arraySolution(1000, 97, 11, 1048576))
 export {X, arraySolution}

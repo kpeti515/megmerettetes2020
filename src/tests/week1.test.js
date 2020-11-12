@@ -23,8 +23,8 @@ test('return the actual X value RND97,11(999)', () => {
 })
 
 test('return the actual sum value up to RND97,11(2)', () => {
-  expect(1089).toBe(1089)
+  expect(arraySolution(2, a,c, modDivider)).toBe(1089)
 })
-test('return the actual sum value up to RND97,11(2)', () => {
-  expect(arraySolution(1000)).toBe(513866332)
+test('return the actual sum value up to RND97,11(999)', () => {
+  expect(arraySolution(1000, a, c, modDivider)).toBe(513866332)
 })
