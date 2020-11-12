@@ -8,7 +8,7 @@
   },
   "name": "megmerettetes2020",
   "version": "1.0.0",
-  "main": "week1.js",
+  "main": "/src/tasks/week1.js",
   "author": "Lorand Kallai",
   "license": "MIT",
   "devDependencies": {
